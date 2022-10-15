@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="work">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa de trabajo</title>
+
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- bootstrap 5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Local -->
+    <script src="Angularjs.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/511ba11c9f.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="container" ng-controller="ctr_module_4">
+    <div class="content">
+        <div class="aside-menu">
+            <label>Menu</label>
+        </div>
+        <div class="right">
+            <div class="right-pag">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="../Modulo_1/index.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_2/index.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_3/index.html">3</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_4/index.html">4</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_5/index.html">5</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_6/index.html">6</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_7/index.html">7</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_8/index.html">8</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_9/index.html">9</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_10/index.html">10</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="container text-center">
+                <div class="container">
+                    <div type="button" id="results-search" class="row my-3 py-2" data-bs-toggle="modal" data-bs-target="#jobBank">
+                        <div id="options-label" class="col-11 px-4">
+                            <p class="fs-6 m-0">Desarrollador de software 2</p>
+                            <p class="fw-semibold m-0">Pendiente - Berumen Ramirez David Victor</p>
+                        </div>
+                        <div class="col-1">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal informacion -->
+    <div class="modal fade" id="jobBank" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Información del empleo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-1">
+                                <i class="fa-solid fa-flag"></i>
+                            </div>
+                            <div class="col-11 p-0">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <p>Título</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row align-items-center">
+                            <div class="col-1">
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+                            <div class="col-11 p-0">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <p class="fs-5 m-0">Fecha de publicación</p>
+                                    <p class="fs-6 fw-semibold m-0">2022-10-08</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row align-items-center">
+                            <div class="col-1">
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+                            <div class="col-11 p-0">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <p class="fs-5 m-0">Valido hasta</p>
+                                    <p class="fs-6 fw-semibold m-0">2022-10-08</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row align-items-center">
+                            <div class="col-1">
+                                <i class="fa-solid fa-hashtag"></i>
+                            </div>
+                            <div class="col-11 p-0">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <p class="fs-5 m-0">Número de telefono</p>
+                                    <p class="fs-6 fw-semibold m-0">NaN</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#jobBankDelete">Eliminar</button>
+                    <button type="button" class="btn btn-success">Editar información</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal borrar -->
+    <div class="modal fade" id="jobBankDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="content-fluid">
+                        <div class="row">
+                            <div class="d-flex p-2 justify-content-center">
+                                <img src="../imgs/exclamacion-icon.png" alt="exclamation-icon" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex p-2 text-center justify-content-center">
+                                <h3 class="fs-3 fw-bold">¿Estás seguro de eliminar el empleo?</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex p-2 text-center justify-content-center">
+                                <p class="fs-5 fw-normal">¡Esta acción es irreversible!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#jobBank">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal editar información -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+
+</html>

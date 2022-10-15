@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="config">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes</title>
+
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- bootstrap 5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Local -->
+    <script src="Angularjs.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/511ba11c9f.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="container" ng-controller="ctr_module_10">
+    <div class="content">
+        <div class="aside-menu">
+            <label>Menu</label>
+        </div>
+        <div class="right">
+            <div class="right-pag">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="../Modulo_1/index.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_2/index.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_3/index.html">3</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_4/index.html">4</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_5/index.html">5</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_6/index.html">6</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_7/index.html">7</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_8/index.html">8</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_9/index.html">9</a></li>
+                        <li class="page-item"><a class="page-link" href="../Modulo_10/index.html">10</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="container text-center">
+                <div class="row g-3 m-1">
+                    <!-- Parte izquierda -->
+                    <div class="col-lg-6">
+                        <!-- General -->
+                        <div class="card mt-2">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <p class="fs-5 fw-bolder m-0">General</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">ID</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-6">
+                                        <blockquote class="blockquote text-end m-2 px-3">
+                                            <p class="user-select-none badge rounded-pill text-bg-success">9</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">C.C.T.</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-6">
+                                        <blockquote class="blockquote text-end m-2 px-3">
+                                            <p class="user-select-none badge rounded-pill text-bg-success">DEMO</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row row-cols-2">
+                                    <div class="col-8">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">Usuario</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-4">
+                                        <blockquote class="blockquote text-end m-2 px-3">
+
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start mx-2 px-3">
+                                            <p class="user-select-none fs-6">@demo</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start mx-2 px-3">
+                                            <p class="user-select-none badge rounded-pill text-bg-success">demo.escolares.com.mx</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">Dominio</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-6">
+                                        <blockquote class="blockquote text-end m-2 px-3">
+                                            <p class="user-select-none badge rounded-pill text-bg-success">DEMO</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row row-cols-2">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">Nombre de la institución</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none fs-6">Demo</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row row-cols-2">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">Acronimo</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="DEMO" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row row-cols-2 mb-1">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">Palabras clave de búsqueda</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">demo, test escuela</textarea>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Datos de contacto -->
+                        <form class="card mt-2">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <p class="fs-5 fw-bolder m-0">Datos de contacto</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Sitio web</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="https://escolaresmx.com" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Teléfono(s)</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="6181643396" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Correo electrónico</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="escolaresmx.com@gmail.com" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Dirección</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Ameca #405 Colonia Jalisco</textarea>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Estado</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona un estado-</option>
+                                                <option label="Aguascalientes" value="1">Agosto 2022 - Enero 2023</option>
+                                                <option label="Baja california" value="2">Febrero - Julio 2022</option>
+                                                <option label="Baja california sur" value="3">Agosto 2021 - Enero 2022</option>
+                                                <option label="Campeche" value="4">Febrero - Julio 2021</option>
+                                                <option label="Chiapas" value="5">Agosto 2020 - Enero 2021</option>
+                                                <option label="Chihuahua" value="6">Febrero - Julio 2020</option>
+                                                <option label="Ciudad de méxico" value="7">Agosto 2019 - Enero 2020</option>
+                                                <option label="Coahuila" value="8">Febrero - Agosto 2019</option>
+                                                <option label="Colima" value="9">Agosto 2018 - Enero 2019</option>
+                                                <option label="Durango" value="10">Febrero - Julio 2018</option>
+                                                <option label="Estado de méxico" value="11">Agosto 2017 - Enero 2018</option>
+                                                <option label="Extranjero" value="12">Febrero - Julio 2017</option>
+                                                <option label="Guanajuato" value="12">Febrero - Julio 2017</option>
+                                                <option label="Guerrero" value="12">Febrero - Julio 2017</option>
+                                                <option label="Hidalgo" value="12">Febrero - Julio 2017</option>
+                                                <option label="Jalisco" value="12">Febrero - Julio 2017</option>
+                                                <option label="Michoacan" value="12">Febrero - Julio 2017</option>
+                                                <option label="Morelos" value="12">Febrero - Julio 2017</option>
+                                                <option label="Nayarit" value="12">Febrero - Julio 2017</option>
+                                                <option label="Nuevo Leon" value="12">Febrero - Julio 2017</option>
+                                                <option label="Oaxaca" value="12">Febrero - Julio 2017</option>
+                                                <option label="Puebla" value="12">Febrero - Julio 2017</option>
+                                                <option label="Queretaro" value="12">Febrero - Julio 2017</option>
+                                                <option label="Quintana Roo" value="12">Febrero - Julio 2017</option>
+                                                <option label="San Luis Potosí" value="12">Febrero - Julio 2017</option>
+                                                <option label="Sinaloa" value="12">Febrero - Julio 2017</option>
+                                                <option label="Tabasco" value="12">Febrero - Julio 2017</option>
+                                                <option label="Mataulipas" value="12">Febrero - Julio 2017</option>
+                                                <option label="Tlaxcala" value="12">Febrero - Julio 2017</option>
+                                                <option label="Veracruz" value="12">Febrero - Julio 2017</option>
+                                                <option label="Yucatán" value="12">Febrero - Julio 2017</option>
+                                                <option label="Zacatecas" value="12">Febrero - Julio 2017</option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Municipio</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona un estado-</option>
+                                                <option label="Durango" value="1">Durango</option>
+                                                <option label="Gomez palacio" value="2">Gomez palacio</option>
+                                                <option label="Lerdo" value="3">Lerdo</option>
+                                                <option label="Febrero - Julio 2021" value="4"></option>
+                                                <option label="Agosto 2020 - Enero 2021" value="5"></option>
+                                                <option label="Febrero - Julio 2020" value="6"></option>
+                                                <option label="Agosto 2019 - Enero 2020" value="7"></option>
+                                                <option label="Febrero - Agosto 2019" value="8"></option>
+                                                <option label="Agosto 2018 - Enero 2019" value="9"></option>
+                                                <option label="Febrero - Julio 2018" value="10"></option>
+                                                <option label="Agosto 2017 - Enero 2018" value="11"></option>
+                                                <option label="Febrero - Julio 2017" value="12"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row row-cols-2">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Representante</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="Dhomper Tecnologías" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row mb-1">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Representante de cargo</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="Empresa" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Redes sociales -->
+                        <div class="card mt-2">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <p class="fs-5 fw-bolder m-0">Redes sociales</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Facebook</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="EscolaresMX" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Twitter</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="718261034692255744" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Instagram</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="escolaresmx" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Youtube</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="escolaresmx" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Google Calendar</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="Link del calendario" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Video Promocional</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="Link del video" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row mb-1">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Recorrido 360°</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="text" value="Link recorrido" class="form-control">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Valores de la escuela -->
+                        <div class="card mt-2">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <p class="fs-5 fw-bolder m-0">Valores de la escuela</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">Lema</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Lleva tu escuela a otro nivel</textarea>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">Misión</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Misión</textarea>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">Visión</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Visión</textarea>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row mb-1">
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p class="user-select-none">Valores</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Valores</textarea>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Parte derecha -->
+                    <div class="col-lg-6">
+                        <!-- Perfil -->
+                        <form class="card mt-2">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <p class="fs-5 fw-bolder m-0">Perfil</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Sector</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona una opción-</option>
+                                                <option label="Publico" value="1"></option>
+                                                <option label="Privado" value="2"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Nivel educativo</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona una opción-</option>
+                                                <option label="Básico" value="1"></option>
+                                                <option label="Media superior" value="2"></option>
+                                                <option label="Superior" value="3"></option>
+                                                <option label="No Aplica" value="4"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Categoría</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona una opción-</option>
+                                                <option label="Preescolar" value="1">Durango</option>
+                                                <option label="Primaria" value="2">Gomez palacio</option>
+                                                <option label="Secundaria" value="3">Lerdo</option>
+                                                <option label="Preparatoria" value="4"></option>
+                                                <option label="Profesonal Técnico" value="5"></option>
+                                                <option label="Profesional" value="6"></option>
+                                                <option label="Maestría, Doctorado, Post Doctorado" value="7"></option>
+                                                <option label="Múltiple" value="8"></option>
+                                                <option label="No Aplica" value="9"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Subsistema</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona una opción-</option>
+                                                <option label="DGETAyCM" value="1">Durango</option>
+                                                <option label="DGETI" value="2">Gomez palacio</option>
+                                                <option label="DGCFT" value="3">Lerdo</option>
+                                                <option label="DGECYTM" value="4"></option>
+                                                <option label="DGB" value="5"></option>
+                                                <option label="CONALEP" value="6"></option>
+                                                <option label="DGCOLBACH" value="7"></option>
+                                                <option label="No Aplica" value="8"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Turno</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona una opción-</option>
+                                                <option label="Matutino" value="1"></option>
+                                                <option label="Vespertino" value="2"></option>
+                                                <option label="Matutino y Vespertino" value="3"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Formato GSuite</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona una opción-</option>
+                                                <option label="matricula@demo.edu.mx" value="1"></option>
+                                                <option label="paterno.materno.nombre@demo.edu.mx" value="2"></option>
+                                                <option label="paterno.materno.inicial_nombre@demo.edu.mx" value="3"></option>
+                                                <option label="nombre.paterno.materno@demo.edu.mx" value="4"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Diseño -->
+                        <form class="card mt-2">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <p class="fs-5 fw-bolder m-0">Perfil</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Página de inicio</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona una opción-</option>
+                                                <option label="Panel" value="1"></option>
+                                                <option label="Landing" value="2"></option>
+                                                <option label="Web" value="3"></option>
+                                                <option label="Aspirantes" value="4"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Tema</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>-Selecciona un estado-</option>
+                                                <option label="Básico" value="1"></option>
+                                                <option label="Media superior" value="2"></option>
+                                                <option label="Superior" value="3"></option>
+                                                <option label="No Aplica" value="4"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Estilo</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <select class="form-select" aria-label="-Selecciona un periodo-">
+                                                <option selected>Por defecto</option>
+                                                <option label="Claro" value="1"></option>
+                                                <option label="Oscuro" value="2"></option>
+                                            </select>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <p>Color</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-7">
+                                        <blockquote class="blockquote text-start m-2 px-3">
+                                            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Imagenes -->
+                        <div class="card mt-2">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <p class="fs-5 fw-bolder m-0">Imagenes</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <!-- Logo -->
+                                <div class="row align-items-center">
+                                    <div class="col-2 px-1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div id="options-label" class="col-10">
+                                        <div class="mb-3">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Logo</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <!-- Fachada -->
+                                <div class="row align-items-center">
+                                    <div class="col-2 px-1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div id="options-label" class="col-10">
+                                        <div class="mb-3">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Fachada</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <!-- Fondo -->
+                                <div class="row align-items-center">
+                                    <div class="col-2 px-1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div id="options-label" class="col-10">
+                                        <div class="mb-3">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Fondo</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <!-- Membrete -->
+                                <div class="row align-items-center">
+                                    <div class="col-2 px-1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div id="options-label" class="col-10">
+                                        <div class="mb-3">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Membrete</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <!-- Representante -->
+                                <div class="row align-items-center">
+                                    <div class="col-2 px-1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div id="options-label" class="col-10">
+                                        <div class="mb-3">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Representante</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <!-- Representante mensaje -->
+                                <div class="row align-items-center">
+                                    <div class="col-2 px-1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div id="options-label" class="col-10">
+                                        <div class="mb-3">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Representante mensaje</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Recursos -->
+                        <div class="card mt-2">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <p class="fs-5 fw-bolder m-0">Recursos</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-4 px-1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div class="col-4 px-1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-3">
+                                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalSourcesOptions">Nuevo</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales -->
+
+    <!-- Modal-recursos-opcion -->
+    <div class="modal fade" id="modalSourcesOptions" tabindex="-1" aria-labelledby="modalSourcesOptions" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Elige una opción</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#modalFileUpdate">
+                                <blockquote class="blockquote text-start m-2 px-3">
+                                    <p rtype="button" class="text-center">Archivo</p>
+                                </blockquote>
+                            </div>
+                            <hr class="my-2">
+                            <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#modalLinkUpdate">
+                                <blockquote class="blockquote text-start m-2 px-3">
+                                    <p class="text-center">Enlace</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal-subir-archivo -->
+    <div class="modal fade" id="modalFileUpdate" tabindex="-1" aria-labelledby="modalFileUpdate" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Archivo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row row-cols-2">
+                            <div class="col-12">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <p>Título</p>
+                                </blockquote>
+                            </div>
+                            <div class="col-12">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <input type="text" value="test" class="form-control">
+                                </blockquote>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row row-cols-2">
+                            <div class="col-12">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <p>Link</p>
+                                </blockquote>
+                            </div>
+                            <div class="col-12">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <input type="text" value="test.com" class="form-control">
+                                </blockquote>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row align-items-center">
+                            <div id="options-label" class="col-12">
+                                <div class="mb-3">
+                                    <div class="mb-3">
+                                        <input class="form-control" type="file" id="formFile">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalSourcesOptions">Cancelar</button>
+                    <button type="button" class="btn btn-success">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal-subir-enlace -->
+    <div class="modal fade" id="modalLinkUpdate" tabindex="-1" aria-labelledby="modalFileUpdate" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Enlace</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row row-cols-2">
+                            <div class="col-12">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <p>Título</p>
+                                </blockquote>
+                            </div>
+                            <div class="col-12">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <input type="text" value="test" class="form-control">
+                                </blockquote>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row row-cols-2">
+                            <div class="col-12">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <p>Link</p>
+                                </blockquote>
+                            </div>
+                            <div class="col-12">
+                                <blockquote class="blockquote text-start m-1 px-1">
+                                    <input type="text" value="google.com" class="form-control">
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalSourcesOptions">Cancelar</button>
+                    <button type="button" class="btn btn-success">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8 " crossorigin="anonymous "></script>
+</body>
+
+</html>
