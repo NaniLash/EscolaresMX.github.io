@@ -43,7 +43,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="container text-center">
+            <div class="container text-center border border-dark">
                 <div class="row g-3 m-1">
                     <!-- Parte izquierda -->
                     <div class="col-lg-6">
@@ -822,7 +822,9 @@
         </div>
     </div>
 
+    <br>
     <!-- Modales -->
+
 
     <!-- Modal-recursos-opcion -->
     <div class="modal fade" id="modalSourcesOptions" tabindex="-1" aria-labelledby="modalSourcesOptions" aria-hidden="true">
@@ -834,17 +836,22 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#modalFileUpdate">
-                                <blockquote class="blockquote text-start m-2 px-3">
-                                    <p rtype="button" class="text-center">Archivo</p>
-                                </blockquote>
+                        <div class="list-group-item align-items-center p-1 border-0 border-bottom rounded-1 btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#modalFileUpdate">
+                            <div type="button">
+                                <div class="row align-items-center mx-0">
+                                    <div class="col-12 text-center">
+                                        <p class="border border-0 my-0 p-3 fs-4">Archivo</p>
+                                    </div>
+                                </div>
                             </div>
-                            <hr class="my-2">
-                            <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#modalLinkUpdate">
-                                <blockquote class="blockquote text-start m-2 px-3">
-                                    <p class="text-center">Enlace</p>
-                                </blockquote>
+                        </div>
+                        <div class="list-group-item align-items-center p-1 border-0 border-bottom rounded-1 btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#modalLinkUpdate">
+                            <div type="button">
+                                <div class="row align-items-center mx-0">
+                                    <div class="col-12 text-center">
+                                        <p class="border border-0 my-0 p-3 fs-4">Enlace</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

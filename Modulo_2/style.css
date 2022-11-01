@@ -75,8 +75,8 @@
         max-width: 160px;
         border: 1px black solid;
     }
-    .cont-icon {
-        width: 20px;
+    .right {
+        width: calc(100% - 160px);
     }
 }
 
@@ -86,8 +86,8 @@
         max-width: 200px;
         border: 1px black solid;
     }
-    .cont-icon {
-        width: 20px;
+    .right {
+        width: calc(100% - 200px);
     }
 }
 
@@ -97,8 +97,8 @@
         max-width: 240px;
         border: 1px black solid;
     }
-    .cont-icon {
-        width: 20px;
+    .right {
+        width: calc(100% - 240px);
     }
 }
 
@@ -108,7 +108,7 @@
         max-width: 280px;
         border: 1px black solid;
     }
-    .cont-icon {
-        width: 20px;
+    .right {
+        width: calc(100% - 280px);
     }
 }

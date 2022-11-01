@@ -44,6 +44,9 @@
         max-width: 160px;
         border: 1px black solid;
     }
+    .right {
+        width: calc(100% - 160px);
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -51,6 +54,9 @@
         min-width: 200px;
         max-width: 200px;
         border: 1px black solid;
+    }
+    .right {
+        width: calc(100% - 200px);
     }
 }
 
@@ -60,6 +66,9 @@
         max-width: 240px;
         border: 1px black solid;
     }
+    .right {
+        width: calc(100% - 240px);
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -67,5 +76,8 @@
         min-width: 280px;
         max-width: 280px;
         border: 1px black solid;
+    }
+    .right {
+        width: calc(100% - 280px);
     }
 }

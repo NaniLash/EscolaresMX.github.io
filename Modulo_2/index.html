@@ -43,20 +43,50 @@
                     </ul>
                 </nav>
             </div>
-            <div class="container text-center">
+            <div class="container text-center border border-dark">
                 <div class="row g-4 m-0">
-                    <div class="mb-4">
-                        <label for="formGroupExampleInput" class="form-label">Buscador</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingresa lo que deseas buscar">
-                    </div>
-                    <div class="container">
-                        <div id="results-search" class="row shadow-sm mb-4 bg-body rounded py-2">
-                            <div class="col-1">
-                                <i id="icon-x" class="fa-sharp fa-solid fa-circle-xmark"></i>
+                    <div class="card p-0 shadow-sm bg-body">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-12 text-start">
+                                    <p class="fs-5 fw-bold m-0">
+                                        Buscador
+                                    </p>
+                                </div>
                             </div>
-                            <div id="options-label" class="col-11 p-0">
-                                <p class="fs-6 m-0">Todavía no hay ninguna materia</p>
-                                <p class="fw-semibold m-0">Las materias disponibles se mostrarán aquí.</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-1 px-1">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div class="col-11 text-start">
+                                    <div>
+                                        <input type="search" class="form-control" name="input-name" id="vote-name" aria-describedby="" placeholder="Buscar citatorio">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-0 shadow-sm mb-2 bg-body">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-12 text-start">
+                                    <p class="fs-5 fw-bold m-0">
+                                        Datos
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-sharp fa-solid fa-circle-xmark fs-3"></i>
+                                </div>
+                                <div class="col-11 text-start">
+                                    <p class="fs-6 m-0">Todavía no hay ninuna materia</p>
+                                    <p class="fw-semibold fs-6 m-0">Las materias disponibles se mostrarán aquí.</p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -78,6 +78,9 @@
     .cont-icon {
         width: 20px;
     }
+    .right {
+        width: calc(100% - 160px);
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -88,6 +91,9 @@
     }
     .cont-icon {
         width: 20px;
+    }
+    .right {
+        width: calc(100% - 200px);
     }
 }
 
@@ -100,6 +106,9 @@
     .cont-icon {
         width: 20px;
     }
+    .right {
+        width: calc(100% - 240px);
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -110,5 +119,8 @@
     }
     .cont-icon {
         width: 20px;
+    }
+    .right {
+        width: calc(100% - 280px);
     }
 }

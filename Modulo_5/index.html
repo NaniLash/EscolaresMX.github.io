@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="Citatorios">
+<html lang="en" ng-app="poll">
 
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
     <script src="https://kit.fontawesome.com/511ba11c9f.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="container" ng-controller="ctr_module_2">
+<body class="container" ng-controller="ctr_module_5">
     <div class="content">
         <div class="aside-menu">
             <label>Menu</label>
@@ -43,7 +43,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="container text-center">
+            <div class="container text-center border border-dark">
                 <!-- parte encuestas -->
                 <div id="select-poll" class="card my-3 shadow-sm bg-body rounded w-75">
                     <div class="card-header">
@@ -89,12 +89,12 @@
                             <p class="fs-6 fw-bolder m-0">Configuración</p>
                         </div>
                     </div>
-                    <div class="card-body text-secondary pe-2 py-1">
-                        <div type="button" class="row py-2 align-items-center" data-bs-toggle="modal" data-bs-target="#modalReactivos">
+                    <div class="card-body rounded-0 btn btn-light text-secondary" data-bs-toggle="modal" data-bs-target="#modalReactivos">
+                        <div type="button" class="row align-items-center">
                             <div class="col-1">
                                 <i class="fa-sharp fa-solid fa-list-check"></i>
                             </div>
-                            <div id="options-label" class="col-10 p-0">
+                            <div id="options-label" class="col-10">
                                 <p class="fs-6 m-0">Reactivos</p>
                                 <p class="fw-semibold fs-6 m-0">Las materias disponibles se mostrarán aquí.</p>
                             </div>
@@ -109,60 +109,70 @@
                         </div>
                     </div>
                     <hr class="m-0">
-                    <div class="card-body text-secondary pe-2 py-1">
-                        <div role="button" class="row py-2 align-items-center" data-bs-toggle="modal" data-bs-target="#modalRespuestas">
-                            <div class="col-1">
-                                <i class="fa-sharp fa-solid fa-list"></i>
-                            </div>
-                            <div id="options-label" class="col-10 p-0">
-                                <p class="fs-6 m-0">Respuestas</p>
-                                <p class="fw-semibold fs-6 m-0">Lista de alumno que han contestado</p>
-                            </div>
-                            <div class="col-1">
-                                <i class="fa-solid fa-ellipsis"></i>
-                            </div>
-                        </div>
-                        <hr class="my-1">
-                        <div role="button" class="row py-2 align-items-center">
-                            <div class="col-1">
-                                <i class="fa-regular fa-circle-xmark"></i>
-                            </div>
-                            <div id="options-label" class="col-10 p-0">
-                                <p class="fs-6 m-0">Faltantes</p>
-                                <p class="fw-semibold fs-6 m-0">Lista de alumno que han contestado</p>
-                            </div>
-                            <div class="col-1">
-                                <i class="fa-solid fa-ellipsis"></i>
+                    <div class="card-body text-secondary p-0">
+                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3" data-bs-toggle="modal" data-bs-target="#modalRespuestas">
+                            <div type="button" class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-sharp fa-solid fa-list"></i>
+                                </div>
+                                <div id="options-label" class="col-10">
+                                    <p class="fs-6 m-0">Respuestas</p>
+                                    <p class="fw-semibold fs-6 m-0">Lista de alumno que han contestado</p>
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
                             </div>
                         </div>
-                        <hr class="my-1">
-                        <div role="button" class="row py-2 align-items-center">
-                            <div class="col-1">
-                                <i class="fa-solid fa-cloud-arrow-down"></i>
-                            </div>
-                            <div id="options-label" class="col-11 p-0">
-                                <p class="fs-6 m-0">Exportar</p>
-                                <p class="fw-semibold fs-6 m-0">Descarga concentrado de alumnos que han contestado la encuesta.</p>
-                            </div>
-                        </div>
-                        <hr class="my-1">
-                        <div role="button" class="row py-2 align-items-center">
-                            <div class="col-1">
-                                <i class="fa-solid fa-cloud-arrow-down"></i>
-                            </div>
-                            <div id="options-label" class="col-11 p-0">
-                                <p class="fs-6 m-0">Exportar SABANA</p>
-                                <p class="fw-semibold fs-6 m-0">Descarga concentrado de alumnos que han contestado la encuesta.</p>
+                        <hr class="my-0">
+                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
+                            <div type="button" class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                </div>
+                                <div id="options-label" class="col-10">
+                                    <p class="fs-6 m-0">Faltantes</p>
+                                    <p class="fw-semibold fs-6 m-0">Lista de alumno que han contestado</p>
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
                             </div>
                         </div>
-                        <hr class="my-1">
-                        <div role="button" class="row py-2 align-items-center">
-                            <div class="col-1">
-                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                        <hr class="my-0">
+                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
+                            <div role="button" class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                </div>
+                                <div id="options-label" class="col-11">
+                                    <p class="fs-6 m-0">Exportar</p>
+                                    <p class="fw-semibold fs-6 m-0">Descarga concentrado de alumnos que han contestado la encuesta.</p>
+                                </div>
                             </div>
-                            <div id="options-label" class="col-11 p-0">
-                                <p class="fs-6 m-0">Exportar faltantes</p>
-                                <p class="fw-semibold fs-6 m-0">Lista de alumnos que aún no han contestado la encuesta.</p>
+                        </div>
+                        <hr class="my-0">
+                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
+                            <div type="button" class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                </div>
+                                <div id="options-label" class="col-11 p-0">
+                                    <p class="fs-6 m-0">Exportar SABANA</p>
+                                    <p class="fw-semibold fs-6 m-0">Descarga concentrado de alumnos que han contestado la encuesta.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-0">
+                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
+                            <div type="button" class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                </div>
+                                <div id="options-label" class="col-11">
+                                    <p class="fs-6 m-0">Exportar faltantes</p>
+                                    <p class="fw-semibold fs-6 m-0">Lista de alumnos que aún no han contestado la encuesta.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -340,13 +350,15 @@
                 </div>
                 <div class="modal-body">
                     <div class="card">
-                        <div class="card-header">
-                            <div class="row" role="button" data-bs-toggle="modal" data-bs-target="#modalEditReactivos">
-                                <div class="col-11 text-start">
-                                    <h2 class="modal-title fs-6">1. ¿Cuántas patas tiene un gato cojo?</h2>
-                                </div>
-                                <div class="col-1" role="button">
-                                    <i class="fa-solid fa-gear"></i>
+                        <div class="card-header align-items-center p-3 btn btn-light" data-bs-toggle="modal" data-bs-target="#modalEditReactivos">
+                            <div type="button">
+                                <div class="row" type="button">
+                                    <div class="col-11 text-start">
+                                        <h2 class="modal-title fs-5">1. ¿Cuántas patas tiene un gato cojo?</h2>
+                                    </div>
+                                    <div class="col-1" role="button">
+                                        <i class="fa-solid fa-gear"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -397,9 +409,11 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row align-items-center" role="button" data-bs-toggle="modal" data-bs-target="#modalOpcionesR2">
-                                    <div class="col-12 text-start">
-                                        <p class="text-primary fs-6 m-0"><i class="fa-solid fa-plus"></i> Agregar opción</p>
+                                <div class="list-group-item align-items-center p-2 rounded-1 btn btn-light w-100" data-bs-toggle="modal" data-bs-target="#modalOpcionesR2">
+                                    <div class="row" type="button">
+                                        <div class="col-12 text-start">
+                                            <p class="text-primary fs-6 m-0"><i class="fa-solid fa-plus"></i> Agregar opción</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -407,7 +421,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#nuevoReactivos">Nuevo</button>
+                    <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#modalOpcionesR2">Nuevo</button>
                 </div>
             </div>
         </div>

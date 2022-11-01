@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="voting">
+<html lang="en" ng-app="Citatorios">
 
 <head>
     <meta charset="UTF-8">
@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materias</title>
 
-    <!-- AngularJs -->
+    <!-- Angularjs -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 
-    <!-- Bootstrap -->
+    <!-- bootstrap 5.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- Local -->
-    <script src="AngularJs.js"></script>
-    <link rel="stylesheet" href="Style.css">
+    <script src="Angularjs.js"></script>
+    <link rel="stylesheet" href="style.css">
 
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/511ba11c9f.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="container" ng-controller="ctr_module_3">
+<body class="container" ng-controller="ctr_module_2">
     <div class="content">
         <div class="aside-menu">
             <label>Menu</label>
@@ -43,13 +43,136 @@
                     </ul>
                 </nav>
             </div>
-            <div class="container text-center">
-
+            <div class="container text-center border border-dark">
+                <div class="row g-4 m-0">
+                    <div class="card my-3 p-0">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div class="col-11">
+                                    <input type="text" value="Buscador" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2">
+                                    <button type="button" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-up"></i> Subir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card my-3 p-0">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-start">
+                                <p class="fs-5 fw-bold m-0">Tabla</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover table-sm">
+                                    <thead class="align-middle">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">MATERIA</th>
+                                            <th scope="col">CLAVE</th>
+                                            <th scope="col">NUM. CREDITOS</th>
+                                            <th scope="col">ANIMADOR</th>
+                                            <th scope="col">ARH</th>
+                                            <th scope="col">ASD</th>
+                                            <th scope="col">ASR</th>
+                                            <th scope="col">CONFECCIÓN</th>
+                                            <th scope="col">DISEÑO GRÁFICO</th>
+                                            <th scope="col">INGENIERIA EN SOFTWARE</th>
+                                            <th scope="col">INGENIERIA MECATRÓNICA</th>
+                                            <th scope="col">LICENCIATURA EN TRABAJO SOCIAL</th>
+                                            <th scope="col">MECARÓNICA</th>
+                                            <th scope="col">PRUEBA</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" colspan="2"></th>
+                                            <th scope="col" colspan="3">GLOBAL</th>
+                                            <th scope="col" colspan="10">CARRERAS</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">
+                                                <input class="form-control form-control-sm" type="text" placeholder="Escribe el nombre de la materia" aria-label=".form-control-sm example">
+                                            </th>
+                                            <th scope="col">
+                                                <input class="form-control form-control-sm" type="text" placeholder="Clave (Opcional)" aria-label=".form-control-sm example">
+                                            </th>
+                                            <th scope="col">
+                                                <input class="form-control form-control-sm" type="text" placeholder="Créditos (Opcional)" aria-label=".form-control-sm example">
+                                            </th>
+                                            <th scope="col" colspan="11"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="align-middle">
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8 " crossorigin="anonymous "></script>
 </body>
 
 </html>
