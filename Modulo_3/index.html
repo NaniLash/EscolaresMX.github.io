@@ -45,6 +45,7 @@
             </div>
             <div class="container text-center border border-dark">
                 <div class="row g-3 m-0">
+                    <!-- Buscador -->
                     <div class="card p-0">
                         <div class="card-header">
                             <div class="row align-items-center">
@@ -62,12 +63,13 @@
                                 </div>
                                 <div class="col-11 text-start">
                                     <div>
-                                        <input type="search" class="form-control" name="input-name" id="vote-name" aria-describedby="" placeholder="Buscar votación">
+                                        <input type="search" ng-model="search_vote" class="form-control" placeholder="Buscar votación">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Tabla -->
                     <div class="card my-3 p-0">
                         <div class="card-header">
                             <div class="d-flex justify-content-start">
@@ -75,107 +77,91 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive user-select-none">
-                                <table class="table table-striped table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Título</th>
-                                            <th scope="col">Descripción</th>
-                                            <th scope="col">Link de la Convocatoria</th>
-                                            <th scope="col">Abierto</th>
-                                            <th scope="col">Visible</th>
-                                            <th scope="col">Guardar Candidato</th>
-                                            <th scope="col">Num. Votos</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion">
-                                                <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                            <!-- Si no hay registros de votaciones -->
+                            <div ng-if="data_table.length == 0" class="d-flex align-items-center p-2 text-start">
+                                <div class="ps-2 fs-3 text-muted">
+                                    <i class="fa-regular fa-circle-xmark me-3"></i>
+                                </div>
+                                <div class="py-2">
+                                    <p class="border border-0 my-0 pb-1">Todavía no hay ninguna votación registrada</p>
+                                    <p class="border border-0 my-0 pb-1 text-muted">Las votaciones registrados se mostrarán aquí.</p>
+                                </div>
+                            </div>
+                            <!-- Si hay votaciones -->
+                            <div ng-if="data_table.length > 0">
+                                <div class="table-responsive user-select-none">
+                                    <table class="table table-striped table-bordered table-hover align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Título</th>
+                                                <th scope="col">Descripción</th>
+                                                <th scope="col">Link de la Convocatoria</th>
+                                                <th scope="col">Abierto</th>
+                                                <th scope="col">Visible</th>
+                                                <th scope="col">Guardar Candidato</th>
+                                                <th scope="col">Num. Votos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="datos in data_table | filter: search_vote">
+                                                <th scope="row" data-bs-toggle="modal" href="#modalEditarVotacion{{datos.number}}">{{datos.number}}</th>
+                                                <td data-bs-toggle="modal" href="#modalEditarVotacion{{datos.number}}">{{datos.title}}</td>
+                                                <td data-bs-toggle="modal" href="#modalEditarVotacion{{datos.number}}">{{datos.description}}</td>
+                                                <td data-bs-toggle="modal" href="#modalEditarVotacion{{datos.number}}">{{datos.link}}</td>
+                                                <td data-bs-toggle="modal" href="#modalEditarVotacion{{datos.number}}">
+                                                    <div ng-if="datos.open == true">
+                                                        <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.open" checked>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion">
-                                                <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                                    <div ng-if="datos.open == false">
+                                                        <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.open">
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion">
-                                                <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                                </td>
+                                                <td data-bs-toggle="modal" href="#modalEditarVotacion{{datos.number}}">
+                                                    <div ng-if="datos.show == true">
+                                                        <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.show" checked>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion">
-                                                <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                                    <div ng-if="datos.show == false">
+                                                        <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.show">
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion">
-                                                <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                                </td>
+                                                <td data-bs-toggle="modal" href="#modalEditarVotacion{{datos.number}}">
+                                                    <div ng-if="datos.save == true">
+                                                        <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.save" checked>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion">
-                                                <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                                    <div ng-if="datos.save == false">
+                                                        <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.save">
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion">
-                                                <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion">
-                                                <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion">
-                                                <div class="d-flex justify-content-center fs-5" data-bs-toggle="modal" href="#">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td data-bs-toggle="modal" href="#modalEditarVotacion"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                                </td>
+                                                <td data-bs-toggle="modal" href="#modalEditarVotacion{{datos.number}}">{{datos.votes}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,114 +171,143 @@
     </div>
 
     <!-- Modal editar votación -->
-    <div class="modal fade" id="modalEditarVotacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Votación</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="card">
-                            <div class="card-header text-center">
-                                <p class="fs-5 fw-seimbold m-0">Datos</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="row align-items-center mx-0 user-select-none">
-                                    <div class="col-12">
-                                        <p>Título</p>
-                                        <input type="text" class="form-control">
-                                    </div>
+    <div ng-repeat="datos in data_table | filter: search_vote">
+        <div class="modal fade" id="modalEditarVotacion{{datos.number}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Votación</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    <p class="fs-5 fw-seimbold m-0">{{datos.title}}</p>
                                 </div>
-                                <hr>
-                                <div class="row align-items-center mx-0 user-select-none">
-                                    <div class="col-12">
-                                        <p>Descripción</p>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <div class="card-body">
+                                    <div class="row align-items-center mx-0 user-select-none">
+                                        <div class="col-12">
+                                            <p>Título</p>
+                                            <input type="text" class="form-control" value="{{datos.title}}" ng-model="datos.title">
+                                        </div>
                                     </div>
-                                </div>
-                                <hr>
-                                <div class="row align-items-center mx-0 user-select-none">
-                                    <div class="col-12">
-                                        <p>Link de convocatoria</p>
-                                        <input type="text" class="form-control" id="title">
+                                    <hr>
+                                    <div class="row align-items-center mx-0 user-select-none">
+                                        <div class="col-12">
+                                            <p>Descripción</p>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ng-model="datos.description">{{datos.description}}</textarea>
+                                        </div>
                                     </div>
-                                </div>
-                                <hr>
-                                <div class="row align-items-center mx-0 user-select-none">
-                                    <div class="col-5">
-                                        <p class="fs-5 m-0">Abierto</p>
+                                    <hr>
+                                    <div class="row align-items-center mx-0 user-select-none">
+                                        <div class="col-12">
+                                            <p>Link de convocatoria</p>
+                                            <input type="text" class="form-control" value="{{datos.link}}" ng-model="datos.link">
+                                        </div>
                                     </div>
-                                    <div class="col-7">
-                                        <div class="d-flex justify-content-end fs-4">
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                    <hr>
+                                    <div class="row align-items-center mx-0 user-select-none">
+                                        <div class="col-5">
+                                            <p class="fs-5 m-0">Abierto</p>
+                                        </div>
+                                        <div class="col-7">
+                                            <div ng-if="datos.open == true">
+                                                <div class="d-flex justify-content-end fs-4">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.open" checked>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div ng-if="datos.open == false">
+                                                <div class="d-flex justify-content-end fs-4">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.open">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row align-items-center mx-0 user-select-none">
+                                        <div class="col-5">
+                                            <p class="fs-5 m-0">Visible</p>
+                                        </div>
+                                        <div class="col-7">
+                                            <div ng-if="datos.show == true">
+                                                <div class="d-flex justify-content-end fs-4">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.show" checked>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div ng-if="datos.show == false">
+                                                <div class="d-flex justify-content-end fs-4">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.show">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row align-items-center mx-0 user-select-none">
+                                        <div class="col-5">
+                                            <p class="fs-5 m-0">Guardar candidato</p>
+                                        </div>
+                                        <div class="col-7">
+                                            <div ng-if="datos.save == true">
+                                                <div class="d-flex justify-content-end fs-4">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.save" checked>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div ng-if="datos.save == false">
+                                                <div class="d-flex justify-content-end fs-4">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" ng-model="datos.save">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
-                                <div class="row align-items-center mx-0 user-select-none">
-                                    <div class="col-5">
-                                        <p class="fs-5 m-0">Visible</p>
+                                <div class="card-footer border-bottom">
+                                    <div class="d-flex justify-content-center">
+                                        <p class="fs-5 py-2 m-0">Opciones</p>
                                     </div>
-                                    <div class="col-7">
-                                        <div class="d-flex justify-content-end fs-4">
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                </div>
+                                <div class="card-body">
+                                    <div class="list-group-item align-items-center p-0 border-0 border-bottom rounded-1 btn btn-light" type="button" data-bs-toggle="modal" href="#modalCandidatos">
+                                        <div type="button">
+                                            <div class="row align-items-center mx-0">
+                                                <div class="col-1">
+                                                    <i class="fa-solid fa-at fs-3"></i>
+                                                </div>
+                                                <div class="col-10 text-start">
+                                                    <p class="border border-0 my-0 pt-2 fs-6">Candidatos</p>
+                                                    <p class="border border-0 my-0 pb-2 text-muted">Lista de candidatos de la votación</p>
+                                                </div>
+                                                <div class="col-1">
+                                                    <i class="fa-solid fa-ellipsis fs-3"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <hr>
-                                <div class="row align-items-center mx-0 user-select-none">
-                                    <div class="col-5">
-                                        <p class="fs-5 m-0">Guardar candidato</p>
-                                    </div>
-                                    <div class="col-7">
-                                        <div class="d-flex justify-content-end fs-4">
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer border-bottom">
-                                <div class="d-flex justify-content-center">
-                                    <p class="fs-5 py-2 m-0">Opciones</p>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="list-group-item align-items-center p-0 border-0 border-bottom rounded-1 btn btn-light" type="button" data-bs-toggle="modal" href="#modalCandidatos">
-                                    <div type="button">
-                                        <div class="row align-items-center mx-0">
-                                            <div class="col-1">
-                                                <i class="fa-solid fa-at fs-3"></i>
-                                            </div>
-                                            <div class="col-10 text-start">
-                                                <p class="border border-0 my-0 pt-2 fs-6">Candidatos</p>
-                                                <p class="border border-0 my-0 pb-2 text-muted">Lista de candidatos de la votación</p>
-                                            </div>
-                                            <div class="col-1">
-                                                <i class="fa-solid fa-ellipsis fs-3"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-group-item align-items-center p-0 border-0 rounded-1 btn btn-light" type="button" data-bs-toggle="modal" href="#modalAlumnos">
-                                    <div type="button">
-                                        <div class="row align-items-center mx-0">
-                                            <div class="col-1">
-                                                <i class="fa-solid fa-people-line fs-3"></i>
-                                            </div>
-                                            <div class="col-10 text-start">
-                                                <p class="border border-0 my-0 pt-2 fs-6">Alumnos</p>
-                                                <p class="border border-0 my-0 pb-2 text-muted">Lista de alumnos que votaron</p>
-                                            </div>
-                                            <div class="col-1">
-                                                <i class="fa-solid fa-ellipsis fs-3"></i>
+                                    <div class="list-group-item align-items-center p-0 border-0 rounded-1 btn btn-light" type="button" data-bs-toggle="modal" href="#modalAlumnos">
+                                        <div type="button">
+                                            <div class="row align-items-center mx-0">
+                                                <div class="col-1">
+                                                    <i class="fa-solid fa-people-line fs-3"></i>
+                                                </div>
+                                                <div class="col-10 text-start">
+                                                    <p class="border border-0 my-0 pt-2 fs-6">Alumnos</p>
+                                                    <p class="border border-0 my-0 pb-2 text-muted">Lista de alumnos que votaron</p>
+                                                </div>
+                                                <div class="col-1">
+                                                    <i class="fa-solid fa-ellipsis fs-3"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -300,10 +315,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-danger w-25" data-bs-dismiss="modal">Eliminar</button>
-                    <button type="button" class="btn btn-success w-25">Guargar</button>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-danger w-25" data-bs-dismiss="modal">Eliminar</button>
+                        <button type="button" class="btn btn-success w-25">Guargar</button>
+                    </div>
                 </div>
             </div>
         </div>

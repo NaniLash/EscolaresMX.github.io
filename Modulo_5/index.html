@@ -55,20 +55,7 @@
                             </div>
                             <div class="col-8">
                                 <blockquote class="blockquote text-start m-0 px-2">
-                                    <select class="form-select" aria-label="-Selecciona un periodo-">
-                                            <option selected>-Selecciona una encuesta-</option>
-                                            <option label="Canales de percepción(VARK) - ¿Cómo aprendo mejor?" value="1"></option>
-                                            <option label="Encuesta de conocimientos generales" value="2"></option>
-                                            <option label="Encuesta de satisfacción" value="3"></option>
-                                            <option label="Encuesta demo" value="4"></option>
-                                            <option label="Examen de ecología 2" value="5"></option>
-                                            <option label="Examen de matemáticas" value="6"></option>
-                                            <option label="Grasha test" value="7"></option>
-                                            <option label="Grasha test" value="8"></option>
-                                            <option label="Grasha test" value="9"></option>
-                                            <option label="Habitos alimenticios" value="10"></option>
-                                            <option label="Test" value="11"></option>
-                                        </select>
+                                    <select class="form-select ng-pristine ng-valid ng-not-empty ng-valid-require ng-touched" id="group" ng-options="option.name for option in data_period.M_options track by option.id" ng-model="data_period.D_options" required></select>
                                 </blockquote>
                             </div>
                         </div>
@@ -83,110 +70,110 @@
                     </div>
                 </div>
                 <!-- parte configuración -->
-                <div id="select-poll" class="card my-3 shadow-sm bg-body rounded w-75">
-                    <div class="card-header">
-                        <div class="row align-items-center">
-                            <p class="fs-6 fw-bolder m-0">Configuración</p>
-                        </div>
-                    </div>
-                    <div class="card-body rounded-0 btn btn-light text-secondary" data-bs-toggle="modal" data-bs-target="#modalReactivos">
-                        <div type="button" class="row align-items-center">
-                            <div class="col-1">
-                                <i class="fa-sharp fa-solid fa-list-check"></i>
-                            </div>
-                            <div id="options-label" class="col-10">
-                                <p class="fs-6 m-0">Reactivos</p>
-                                <p class="fw-semibold fs-6 m-0">Las materias disponibles se mostrarán aquí.</p>
-                            </div>
-                            <div class="col-1">
-                                <i class="fa-solid fa-ellipsis"></i>
+                <div ng-if="data_period.D_options.view != 'invisible'">
+                    <div id="select-poll" class="card my-3 shadow-sm bg-body rounded w-75">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <p class="fs-6 fw-bolder m-0">Configuración</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row align-items-center">
-                            <p class="fs-6 fw-bolder m-0">Respuestas</p>
-                        </div>
-                    </div>
-                    <hr class="m-0">
-                    <div class="card-body text-secondary p-0">
-                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3" data-bs-toggle="modal" data-bs-target="#modalRespuestas">
+                        <div class="card-body rounded-0 btn btn-light text-secondary" data-bs-toggle="modal" data-bs-target="#modalReactivos">
                             <div type="button" class="row align-items-center">
                                 <div class="col-1">
-                                    <i class="fa-sharp fa-solid fa-list"></i>
+                                    <i class="fa-sharp fa-solid fa-list-check"></i>
                                 </div>
                                 <div id="options-label" class="col-10">
-                                    <p class="fs-6 m-0">Respuestas</p>
-                                    <p class="fw-semibold fs-6 m-0">Lista de alumno que han contestado</p>
+                                    <p class="fs-6 m-0">Reactivos</p>
+                                    <p class="fw-semibold fs-6 m-0">Las materias disponibles se mostrarán aquí.</p>
                                 </div>
                                 <div class="col-1">
                                     <i class="fa-solid fa-ellipsis"></i>
                                 </div>
                             </div>
                         </div>
-                        <hr class="my-0">
-                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
-                            <div type="button" class="row align-items-center">
-                                <div class="col-1">
-                                    <i class="fa-regular fa-circle-xmark"></i>
-                                </div>
-                                <div id="options-label" class="col-10">
-                                    <p class="fs-6 m-0">Faltantes</p>
-                                    <p class="fw-semibold fs-6 m-0">Lista de alumno que han contestado</p>
-                                </div>
-                                <div class="col-1">
-                                    <i class="fa-solid fa-ellipsis"></i>
-                                </div>
+                        <div class="card-footer">
+                            <div class="row align-items-center">
+                                <p class="fs-6 fw-bolder m-0">Respuestas</p>
                             </div>
                         </div>
-                        <hr class="my-0">
-                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
-                            <div role="button" class="row align-items-center">
-                                <div class="col-1">
-                                    <i class="fa-solid fa-cloud-arrow-down"></i>
-                                </div>
-                                <div id="options-label" class="col-11">
-                                    <p class="fs-6 m-0">Exportar</p>
-                                    <p class="fw-semibold fs-6 m-0">Descarga concentrado de alumnos que han contestado la encuesta.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="my-0">
-                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
-                            <div type="button" class="row align-items-center">
-                                <div class="col-1">
-                                    <i class="fa-solid fa-cloud-arrow-down"></i>
-                                </div>
-                                <div id="options-label" class="col-11 p-0">
-                                    <p class="fs-6 m-0">Exportar SABANA</p>
-                                    <p class="fw-semibold fs-6 m-0">Descarga concentrado de alumnos que han contestado la encuesta.</p>
+                        <hr class="m-0">
+                        <div class="card-body text-secondary p-0">
+                            <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3" data-bs-toggle="modal" data-bs-target="#modalRespuestas">
+                                <div type="button" class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa-sharp fa-solid fa-list"></i>
+                                    </div>
+                                    <div id="options-label" class="col-10">
+                                        <p class="fs-6 m-0">Respuestas</p>
+                                        <p class="fw-semibold fs-6 m-0">Lista de alumno que han contestado</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <hr class="my-0">
-                        <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
-                            <div type="button" class="row align-items-center">
-                                <div class="col-1">
-                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                            <hr class="my-0">
+                            <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
+                                <div type="button" class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa-regular fa-circle-xmark"></i>
+                                    </div>
+                                    <div id="options-label" class="col-10">
+                                        <p class="fs-6 m-0">Faltantes</p>
+                                        <p class="fw-semibold fs-6 m-0">Lista de alumno que han contestado</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
                                 </div>
-                                <div id="options-label" class="col-11">
-                                    <p class="fs-6 m-0">Exportar faltantes</p>
-                                    <p class="fw-semibold fs-6 m-0">Lista de alumnos que aún no han contestado la encuesta.</p>
+                            </div>
+                            <hr class="my-0">
+                            <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
+                                <div role="button" class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                                    </div>
+                                    <div id="options-label" class="col-11">
+                                        <p class="fs-6 m-0">Exportar</p>
+                                        <p class="fw-semibold fs-6 m-0">Descarga concentrado de alumnos que han contestado la encuesta.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-0">
+                            <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
+                                <div type="button" class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                                    </div>
+                                    <div id="options-label" class="col-11 p-0">
+                                        <p class="fs-6 m-0">Exportar SABANA</p>
+                                        <p class="fw-semibold fs-6 m-0">Descarga concentrado de alumnos que han contestado la encuesta.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-0">
+                            <div class="list-group-item rounded-0 btn btn-light text-secondary px-3 py-3">
+                                <div type="button" class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                                    </div>
+                                    <div id="options-label" class="col-11">
+                                        <p class="fs-6 m-0">Exportar faltantes</p>
+                                        <p class="fw-semibold fs-6 m-0">Lista de alumnos que aún no han contestado la encuesta.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container">
-                    <h3>Total de respuestas</h3>
+                    <div class="container">
+                        <h3>Total de respuestas</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- modales -->
-
-    <!-- Editar -->
+    <!-- Modal Editar -->
     <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -340,7 +327,7 @@
         </div>
     </div>
 
-    <!-- Reactivos -->
+    <!-- Modal Reactivos -->
     <div class="modal fade" id="modalReactivos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">

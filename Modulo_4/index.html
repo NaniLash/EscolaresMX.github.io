@@ -45,13 +45,15 @@
             </div>
             <div class="container text-center border border-dark">
                 <div class="container">
-                    <div type="button" id="results-search" class="row my-3 py-2" data-bs-toggle="modal" data-bs-target="#jobBank">
-                        <div id="options-label" class="col-11 px-4">
-                            <p class="fs-6 m-0">Desarrollador de software 2</p>
-                            <p class="fw-semibold m-0">Pendiente - Berumen Ramirez David Victor</p>
-                        </div>
-                        <div class="col-1">
-                            <i class="fa-solid fa-angle-right"></i>
+                    <div ng-repeat="person in data_person">
+                        <div type="button" id="results-search" class="row my-3 py-2" data-bs-toggle="modal" data-bs-target="#jobBank">
+                            <div id="options-label" class="col-11 px-4">
+                                <p class="fs-6 m-0">{{person.career}}</p>
+                                <p class="fw-semibold m-0">{{person.status}} - {{person.name}} {{person.lastname}}</p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,66 +62,68 @@
     </div>
 
     <!-- Modal informacion -->
-    <div class="modal fade" id="jobBank" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Información del empleo</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <div class="col-1">
-                                <i class="fa-solid fa-flag"></i>
+    <div ng-repeat="data in data_person">
+        <div class="modal fade" id="jobBank" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Información del empleo</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-solid fa-flag"></i>
+                                </div>
+                                <div class="col-11 p-0">
+                                    <blockquote class="blockquote text-start m-1 px-1">
+                                        <p>Título</p>
+                                    </blockquote>
+                                </div>
                             </div>
-                            <div class="col-11 p-0">
-                                <blockquote class="blockquote text-start m-1 px-1">
-                                    <p>Título</p>
-                                </blockquote>
+                            <hr>
+                            <div class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-regular fa-calendar"></i>
+                                </div>
+                                <div class="col-11 p-0">
+                                    <blockquote class="blockquote text-start m-1 px-1">
+                                        <p class="fs-5 m-0">Fecha de publicación</p>
+                                        <p class="fs-6 fw-semibold m-0">{{data.dateini}}</p>
+                                    </blockquote>
+                                </div>
                             </div>
-                        </div>
-                        <hr>
-                        <div class="row align-items-center">
-                            <div class="col-1">
-                                <i class="fa-regular fa-calendar"></i>
+                            <hr>
+                            <div class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-regular fa-calendar"></i>
+                                </div>
+                                <div class="col-11 p-0">
+                                    <blockquote class="blockquote text-start m-1 px-1">
+                                        <p class="fs-5 m-0">Valido hasta</p>
+                                        <p class="fs-6 fw-semibold m-0">{{data.dateend}}</p>
+                                    </blockquote>
+                                </div>
                             </div>
-                            <div class="col-11 p-0">
-                                <blockquote class="blockquote text-start m-1 px-1">
-                                    <p class="fs-5 m-0">Fecha de publicación</p>
-                                    <p class="fs-6 fw-semibold m-0">2022-10-08</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row align-items-center">
-                            <div class="col-1">
-                                <i class="fa-regular fa-calendar"></i>
-                            </div>
-                            <div class="col-11 p-0">
-                                <blockquote class="blockquote text-start m-1 px-1">
-                                    <p class="fs-5 m-0">Valido hasta</p>
-                                    <p class="fs-6 fw-semibold m-0">2022-10-08</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row align-items-center">
-                            <div class="col-1">
-                                <i class="fa-solid fa-hashtag"></i>
-                            </div>
-                            <div class="col-11 p-0">
-                                <blockquote class="blockquote text-start m-1 px-1">
-                                    <p class="fs-5 m-0">Número de telefono</p>
-                                    <p class="fs-6 fw-semibold m-0">NaN</p>
-                                </blockquote>
+                            <hr>
+                            <div class="row align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-solid fa-hashtag"></i>
+                                </div>
+                                <div class="col-11 p-0">
+                                    <blockquote class="blockquote text-start m-1 px-1">
+                                        <p class="fs-5 m-0">Número de telefono</p>
+                                        <p class="fs-6 fw-semibold m-0">{{data.phone}}</p>
+                                    </blockquote>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#jobBankDelete">Eliminar</button>
-                    <button type="button" class="btn btn-success">Editar información</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#jobBankDelete">Eliminar</button>
+                        <button type="button" class="btn btn-success">Editar información</button>
+                    </div>
                 </div>
             </div>
         </div>
