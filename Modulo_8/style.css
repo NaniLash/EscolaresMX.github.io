@@ -1,0 +1,91 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Clases */
+
+.content {
+    display: flex;
+    background-color: whitesmoke;
+}
+
+.right {
+    width: 100%;
+}
+
+.right-pag {
+    background-color: rgb(250, 250, 250);
+    border: 1px black solid;
+}
+
+
+/* ID's */
+
+#options-label {
+    text-align: start;
+}
+
+#p-general-1 {
+    float: left;
+}
+
+#p-general-2 {
+    float: right;
+}
+
+
+/* Responsive */
+
+
+/* Barra de módulos */
+
+@media screen and (max-width: 767px) {
+    .aside-menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .aside-menu {
+        min-width: 120px;
+        max-width: 120px;
+        border: 1px black solid;
+    }
+    .right {
+        width: calc(100% - 120px);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .aside-menu {
+        min-width: 160px;
+        max-width: 160px;
+        border: 1px black solid;
+    }
+    .right {
+        width: calc(100% - 160px);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .aside-menu {
+        min-width: 200px;
+        max-width: 200px;
+        border: 1px black solid;
+    }
+    .right {
+        width: calc(100% - 200px);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .aside-menu {
+        min-width: 240px;
+        max-width: 240px;
+        border: 1px black solid;
+    }
+    .right {
+        width: calc(100% - 240px);
+    }
+}
